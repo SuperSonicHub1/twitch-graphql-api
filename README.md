@@ -1,7 +1,7 @@
 # Twitch's GraphQL API
 > A documentation and schema scraping of Twitch's GraphQL API.
 
-Want a Twitch API that doesn't require a signup, has types and documentation, and makes use of one of the most powerful ways to write an API? Continue reading?
+Want a Twitch API that doesn't require a signup, has types and documentation, and makes use of one of the most powerful ways to write an API? Continue reading.
 
 ## Endpoint
 Two are currently available:
@@ -42,7 +42,7 @@ Luckily, Twitch did all the hard work of documenting the API, we just have to ma
 npm install -g graphqldoc
 npx graphqldoc -e https://gql.twitch.tv/gql -x \"Client-Id: kimne78kx3ncx6brgo4mv6wki5h1ko\" -o ./docs
 # Now host it! I prefer using Python 3's http.server.
-python3 -m http.server /docs
+python3 -m http.server --directory docs/
 ```
 > BTW: If the schema on this repository is out-of-date, update it and the docs with `npm run gen-schema && npm run gen-docs` and make a pull request.
 
