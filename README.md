@@ -22,7 +22,7 @@ A `Client-ID` header is required to use the API, unless you're into errors:
 Luckily, Twitch bakes a singular ID into their HTML for some reason: `kimne78kx3ncx6brgo4mv6wki5h1ko`.
 If you're afraid that it'll change someday and want a way to scrape it, run this RegEx pattern through their HTML:
 ```js
-/"Client-ID":"(.*)",/
+/"Client-ID":"(.*)","Content-Type"/
 ```
 
 ## Getting the Schema
@@ -34,8 +34,17 @@ npx get-graphql-schema https://gql.twitch.tv/gql --header Client-Id=kimne78kx3nc
 # or JSON!
 npx get-graphql-schema https://gql.twitch.tv/gql --header Client-Id=kimne78kx3ncx6brgo4mv6wki5h1ko -j > schema.json
 ```
-> BTW: If the schema on this repository is out-of-date, update it with `npm run gen-schema` and make a pull request.
+> BTW: If the schema on this repository is out-of-date, update it and the docs with `npm run gen-schema && npm run gen-docs` and make a pull request.
 
+## Reading the Docs
+Luckily, Twitch did all the hard work of documenting the API, we just have to make it easliy readable. This repository hosts generated documentation via GitHub Pages. However, if you want to generate and host it yourself, use `graphqldoc`:
+```sh
+npm install -g graphqldoc
+npx graphqldoc -e https://gql.twitch.tv/gql -x \"Client-Id: kimne78kx3ncx6brgo4mv6wki5h1ko\" -o ./docs
+# Now host it! I prefer using Python 3's http.server.
+python3 -m http.server /docs
+```
+> BTW: If the schema on this repository is out-of-date, update it and the docs with `npm run gen-schema && npm run gen-docs` and make a pull request.
 
 ## Tools Used
 * [get-graphql-schema](https://github.com/prisma-labs/get-graphql-schema) makes getting Twitch's schema dead simple
