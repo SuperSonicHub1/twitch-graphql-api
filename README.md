@@ -25,6 +25,9 @@ If you're afraid that it'll change someday and want a way to scrape it, run this
 /"Client-ID":"(.*)","Content-Type"/
 ```
 
+## Loggin In
+This is completely optional, but you can go through Twitch's OAuth handshake and get access to login-only features. See [youtube-dl's Twitch extractor]((https://github.com/ytdl-org/youtube-dl/blob/879866a2304c3b0bbbb048feb4253431f0219aa3/youtube_dl/extractor/twitch.py)) if you want an implemented example, as it's decently complex.
+
 ## Getting the Schema
 This repository comes with both GraphQL and JSON representations of the schema dated 1/23/2021, but if you need to download it yourself, e.g. this repository is dead, use `get-graphql-schema`:
 ```sh
