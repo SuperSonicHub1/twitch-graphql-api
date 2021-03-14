@@ -25,11 +25,11 @@ If you're afraid that it'll change someday and want a way to scrape it, run this
 /"Client-ID":"(.*)","Content-Type"/
 ```
 
-## Loggin In
+## Logging In
 This is completely optional, but you can go through Twitch's OAuth handshake and get access to login-only features. See [youtube-dl's Twitch extractor](https://github.com/ytdl-org/youtube-dl/blob/879866a2304c3b0bbbb048feb4253431f0219aa3/youtube_dl/extractor/twitch.py) if you want an implemented example, as it's decently complex.
 
 ## Getting the Schema
-This repository comes with both GraphQL and JSON representations of the schema dated 1/23/2021, but if you need to download it yourself, e.g. this repository is dead, use `get-graphql-schema`:
+This repository comes with both GraphQL and JSON representations of the schema dated 3/14/2021, but if you need to download it yourself, e.g. this repository is dead, use `get-graphql-schema`:
 ```sh
 npm install -g get-graphql-schema
 # Now get it in GQL...
@@ -37,7 +37,7 @@ npx get-graphql-schema https://gql.twitch.tv/gql --header Client-Id=kimne78kx3nc
 # or JSON!
 npx get-graphql-schema https://gql.twitch.tv/gql --header Client-Id=kimne78kx3ncx6brgo4mv6wki5h1ko -j > schema.json
 ```
-> BTW: If the schema on this repository is out-of-date, update it and the docs with `npm run gen-schema && npm run gen-docs` and make a pull request.
+> BTW: If the schema on this repository is out-of-date, update it and the docs with `pnpm run build` and make a pull request.
 
 ## Reading the Docs
 Luckily, Twitch did all the hard work of documenting the API, we just have to make it easliy readable. This repository hosts generated documentation via GitHub Pages. However, if you want to generate and host it yourself, use `graphqldoc`:
@@ -47,10 +47,10 @@ npx graphqldoc -e https://gql.twitch.tv/gql -x \"Client-Id: kimne78kx3ncx6brgo4m
 # Now host it! I prefer using Python 3's http.server.
 python3 -m http.server --directory docs/
 ```
-> BTW: If the schema on this repository is out-of-date, update it and the docs with `npm run gen-schema && npm run gen-docs` and make a pull request.
+> BTW: If the schema on this repository is out-of-date, update it and the docs with `pnpm run build` and make a pull request.
 
 ## Tools Used
-* [get-graphql-schema](https://github.com/prisma-labs/get-graphql-schema) makes getting Twitch's schema dead simple
+* [get-graphql-schema](https://github.com/prisma-labs/get-graphql-schema) makes getting Twitch's schema dead simple.
 * [graphqldoc](https://github.com/CodeSignal/graphqldoc) creates pretty documentation for us to read through.
 
 ## Inspiration & Help
