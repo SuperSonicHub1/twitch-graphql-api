@@ -3,7 +3,7 @@
 
 Want a Twitch API that doesn't require a signup, has types and documentation, and makes use of one of the most powerful ways to write an API? Continue reading.
 
-## Endpoint
+## Endpoints
 Two are currently available:
 * https://gql.twitch.tv/gql
 * https://api.twitch.tv/gql
