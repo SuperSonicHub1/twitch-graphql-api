@@ -57,7 +57,7 @@ python3 -m http.server --directory docs/
 * [A Stack Overflow thread on scraping GraphQL schemas](https://stackoverflow.com/questions/37397886/get-graphql-whole-schema-query)
 * [Maurice Wahba's own documentation of the API](https://github.com/mauricew/twitch-graphql-api)
     * If you want to find creative ways to use the API and get a lower level explanation, give it a read!
-* [youtube-dl]()'s [Twitch extractor](https://github.com/ytdl-org/youtube-dl/blob/879866a2304c3b0bbbb048feb4253431f0219aa3/youtube_dl/extractor/twitch.py)
+* [youtube-dl](https://github.com/ytdl-org/youtube-dl)'s [Twitch extractor](https://github.com/ytdl-org/youtube-dl/blob/879866a2304c3b0bbbb048feb4253431f0219aa3/youtube_dl/extractor/twitch.py)
 
 ## License
 This entire repository is licensed under the *I Solemny Swear That I Am Up To No Good Public License*, a modification of the [WTFPL](http://www.wtfpl.net/) by [d0nk](https://github.com/d0nk) for the release of [parler-tricks](https://github.com/d0nk/parler-tricks), effectively releasing this body of work into the public domain.
