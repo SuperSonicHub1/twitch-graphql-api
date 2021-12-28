@@ -1,12 +1,17 @@
 # Twitch's GraphQL API
 > A documentation and schema scraping of Twitch's GraphQL API.
 
+**NOTE**: Due to [a certain man's wacky shenanigans](https://github.com/daylamtayari/Twitch-GQL),
+introspection of Twitch's GraphQL API has been disabled,
+and likely will continue to be disabled for forever.
+The endpoint, however, is still live, and the schema still usable.
+
 Want a Twitch API that doesn't require a signup, has types and documentation, and makes use of one of the most powerful ways to write an API? Continue reading.
 
 ## Endpoints
-Two are currently available:
+~~Two are~~ One is currently available:
 * https://gql.twitch.tv/gql
-* https://api.twitch.tv/gql
+* ~~https://api.twitch.tv/gql~~ Now returns a 404.
 
 Pick your poison, I guess; I prefer the former.
 
